@@ -16,6 +16,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+      integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Bootstrap Theme</title>
   </head>
@@ -228,6 +235,144 @@
         </div>
       </div>
     </div>
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-5">
+      <div class="container">
+        <h1 class="text-center">Photo Gallery</h1>
+        <p class="text-center">Check Out Our Photos</p>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/560x560"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="560"
+              data-width="560"
+            >
+              <img
+                src="https://source.unsplash.com/random/560x560"
+                alt=""
+                class="img-fluid mb-2"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/561x561"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="561"
+              data-width="561"
+            >
+              <img
+                src="https://source.unsplash.com/random/561x561"
+                alt=""
+                class="img-fluid mb-2"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/562x562"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="562"
+              data-width="562"
+            >
+              <img
+                src="https://source.unsplash.com/random/562x562"
+                alt=""
+                class="img-fluid mb-2"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/563x563"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="563"
+              data-width="563"
+            >
+              <img
+                src="https://source.unsplash.com/random/563x563"
+                alt=""
+                class="img-fluid mb-2"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/564x564"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="564"
+              data-width="564"
+            >
+              <img
+                src="https://source.unsplash.com/random/564x564"
+                alt=""
+                class="img-fluid mb-2"
+            /></a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/565x565"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="565"
+              data-width="565"
+            >
+              <img
+                src="https://source.unsplash.com/random/565x565"
+                alt=""
+                class="img-fluid mb-2"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section id="newsletter" class="text-center p-5 bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Sign Up for Our Newsletter</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Similique blanditiis soluta ea consequuntur nulla tempora sed
+              explicabo assumenda cumque qui.
+            </p>
+            <form class="form-inline justify-content-center">
+              <input
+                type="text"
+                class="form-control mb-2 mr-2"
+                placeholder="Enter Name"
+              />
+              <input
+                type="email"
+                class="form-control mb-2 mr-2"
+                placeholder="Enter Email"
+              />
+              <button class="btn btn-primary mb-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer" class="text-center p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Copyright &copy; <span id="year"></span> Glozzom</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -243,6 +388,12 @@
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+    integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   ></script>
   <script>
     //Get the current year for the copyright
@@ -267,6 +418,12 @@
           $((theModal = " iframe")).attr("src", videoSRC);
         });
       });
+    });
+
+    //Lighbox Init
+    $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
     });
   </script>
 </html>
